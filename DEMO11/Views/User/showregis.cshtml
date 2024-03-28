@@ -1,0 +1,35 @@
+﻿@model IEnumerable<DEMO11.Models.Registration>
+@{
+    ViewBag.Title = "showregis";
+    Layout = "~/Views/Usermaster.cshtml";
+}
+
+<h2>showregis</h2>
+<table>
+    <tr>
+        <td>
+            Name
+        </td>
+        <td>email</td>
+        <td>
+        </td>
+    </tr>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.name</td>
+            <td>@i.email</td>
+            <td>@i.password
+            </td>
+            <td>@i.Cpassowrd</td>
+            <td>@i.phone</td>
+            <td>@i.adhar_No</td>
+            <td>@ViewBag.pic</td><td>
+    <a href="/User/Delres?del=@i.email">Delete</a>
+</td>
+            <td><a href="/User/Updetres?up=@i.email">Upadate</a></td>
+        </tr>
+
+  
+            }
+</table>

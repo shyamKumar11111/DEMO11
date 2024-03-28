@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Updetres";
+    Layout = "~/Views/Usermaster.cshtml";
+}
+
+<h2>Updetres</h2>
+<form action="/User/Updetres" ,method="post">
+    <h2>Name</h2>
+    <input type="text" name="txtname" value=" @ViewBag.name" />
+    <h2>Email</h2>
+    <input type="email" name="txtemail" value="@ViewBag.email" />
+    <input type="password" name="txtpass" value=" @ViewBag.password" />
+    <input type="password" name="txtcpass" value=" @ViewBag.cpassword "/>
+    <input type="number" name="txtmo" value=" @ViewBag.number" />
+    <input type="number" name="txtnum" value=" @ViewBag.adhar" />
+    <input type="submit" value="update" />
+
+</form>

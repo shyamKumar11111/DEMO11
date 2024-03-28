@@ -1,0 +1,26 @@
+﻿@model DEMO11.Models.Registration
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Usermaster.cshtml";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("Index", "User", FormMethod.Post,new {enctype="multipart/form-data"}))
+{
+    @Html.LabelFor(model => model.name);
+    @Html.TextBoxFor(model => model.name);
+
+    @Html.LabelFor(model => model.email);
+    @Html.TextBoxFor(model => model.email);
+    @Html.LabelFor(model => model.password);
+    @Html.TextBoxFor(model => model.password);
+    @Html.LabelFor(model => model.Cpassowrd);
+    @Html.TextBoxFor(model => model.Cpassowrd);
+    @Html.LabelFor(model => model.phone);
+    @Html.TextBoxFor(model => model.phone);
+    @Html.LabelFor(model => model.adhar_No);
+    @Html.TextBoxFor(model => model.adhar_No);
+    @Html.LabelFor(model => model.pic);
+    @Html.TextBoxFor(model => model.pic, "",new{ type="file"});
+    <input type="submit" class="btn btn-info" />
+}
